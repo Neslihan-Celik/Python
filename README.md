@@ -1,2 +1,2 @@
 # Python
-öğrenme sürecim
+öğrenme sürecim ve alıştırmalarım
