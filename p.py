@@ -130,7 +130,7 @@ if sayi%2==0:
 else:
         print('Sayı tek sayıdır ')
 
-'''
+
 #----------------------------------------------------------------------------------#
 #Vize final Ortalama hesaplama (ortalama =vize%50+ Final %50)
 vize=int(input('Lütfen vizenizi giriniz :'))  # type: int
@@ -159,5 +159,81 @@ elif ortalama < 85 and ortalama > 74:
 else:
     harfNotu = 'AA'
     print('\nHarf Notunuz : ', harfNotu,'\nTebrikler! \nBaşarılarınızın devamını dileriz.')
-
+'''
 #----------------------------------------------------------------------------------#
+#manav uygulaması lütfen artık fonksiyonlara geçelim =)
+
+manavList = ['elma', 'armut', 'üzüm', 'muz']
+print("\nManavda bulunan meyveler şunlardır :\n", manavList)
+secim = input('\nHangi meyveyi istersiniz :')
+if secim == 'elma':
+    kilo = int(input('kaç kilo istiyorsunuz :'))
+    fiyat = 4  # Type int
+
+    if kilo == 1:
+        print("\nSeçtiğiniz meyve :", secim, "\nİstediğiniz miktar :", kilo,"kilo", "\nÖdemeniz greken tutar :", fiyat , "TL")
+
+    elif kilo == 2:
+        print("\nSeçtiğiniz meyve :", secim, "\nİstediğiniz miktar :", kilo,"kilo","\nÖdemeniz greken tutar :", fiyat * 2,"TL")
+
+    elif kilo ==3:
+        print("\nSeçtiğiniz meyve :", secim, "\nİstediğiniz miktar :", kilo,"kilo", "\nÖdemeniz greken tutar :", fiyat * 3, "TL")
+
+    else:
+        print("\nManavda istediğiniz miktarda meyve bulunmamaktadır!")
+
+
+elif secim == 'armut':
+    kilo = int(input('kaç kilo istiyorsunuz :'))
+    fiyat = 5  # Type int
+
+    if kilo == 1:
+        print("\nSeçtiğiniz meyve :", secim, "\nİstediğiniz miktar :", kilo, "kilo","\nÖdemeniz greken tutar :", fiyat , "TL")
+
+    elif kilo == 2:
+        print("\nSeçtiğiniz meyve :", secim, "\nİstediğiniz miktar :", kilo, "kilo","\nÖdemeniz greken tutar :", fiyat * 2, "TL")
+
+    elif kilo ==3:
+        print("\nSeçtiğiniz meyve :", secim, "\nİstediğiniz miktar :" ,kilo,"kilo","\nÖdemeniz greken tutar :", fiyat * 3, "TL")
+
+    else:
+        print("\nManavda istediğiniz miktarda meyve bulunmamaktadır!")
+
+
+elif secim == 'üzüm':
+    kilo = int(input('kaç kilo istiyorsunuz :'))
+    fiyat = 7  # Type int
+
+    if kilo == 1:
+        print("\nSeçtiğiniz meyve :", secim, "\nİstediğiniz miktar :", kilo, "kilo","\nÖdemeniz greken tutar :", fiyat , "TL")
+
+    elif kilo == 2:
+        print("\nSeçtiğiniz meyve :", secim, "\nİstediğiniz miktar :", kilo, "kilo","\nÖdemeniz greken tutar :", fiyat * 2, "TL")
+
+    elif kilo ==3:
+        print("\nSeçtiğiniz meyve :", secim, "\nİstediğiniz miktar :" ,kilo,"kilo","\nÖdemeniz greken tutar :", fiyat * 3, "TL")
+
+    else:
+        print("\nManavda istediğiniz miktarda meyve bulunmamaktadır!")
+
+
+elif secim == 'muz':
+    kilo = int(input('kaç kilo istiyorsunuz :'))
+    fiyat = 11  # Type int
+
+    if kilo == 1:
+        print("\nSeçtiğiniz meyve :", secim, "\nİstediğiniz miktar :", kilo, "kilo","\nÖdemeniz greken tutar :", fiyat , "TL")
+
+    elif kilo == 2:
+        print("\nSeçtiğiniz meyve :", secim, "\nİstediğiniz miktar :", kilo, "kilo","\nÖdemeniz greken tutar :", fiyat * 2, "TL")
+
+    elif kilo ==3:
+        print("\nSeçtiğiniz meyve :", secim, "\nİstediğiniz miktar :" ,kilo,"kilo","\nÖdemeniz greken tutar :", fiyat * 3, "TL")
+
+    else:
+        print("\nManavda istediğiniz miktarda meyve bulunmamaktadır!")
+
+
+else:
+    print("\nManavda bulunmayan bir şey girdiniz !\nLütfen tekrar deneyiniz...")
+    print("\nLütfen artık fonksiyonlara geçelim =)")
