@@ -132,6 +132,7 @@ else:
 
 
 #----------------------------------------------------------------------------------#
+
 #Vize final Ortalama hesaplama (ortalama =vize%50+ Final %50)
 vize=int(input('Lütfen vizenizi giriniz :'))  # type: int
 final=int(input('Lütfen finalinizi giriniz :'))  # type: int
@@ -159,7 +160,8 @@ elif ortalama < 85 and ortalama > 74:
 else:
     harfNotu = 'AA'
     print('\nHarf Notunuz : ', harfNotu,'\nTebrikler! \nBaşarılarınızın devamını dileriz.')
-'''
+
+
 #----------------------------------------------------------------------------------#
 #manav uygulaması lütfen artık fonksiyonlara geçelim =)
 
@@ -237,3 +239,164 @@ elif secim == 'muz':
 else:
     print("\nManavda bulunmayan bir şey girdiniz !\nLütfen tekrar deneyiniz...")
     print("\nLütfen artık fonksiyonlara geçelim =)")
+
+
+#----------------------------------------------------------------------------------#
+#--------------------------------Döngüler------------------------------------------#
+
+#for döngüsü
+
+for i in range(1,100):
+    if i%2==0:
+        print(i)
+
+for i in range(1,100):
+    if i%2==1:
+        print(i)
+
+
+sayilar='1234567890'
+for sayi in sayilar:
+    print(int(sayi))
+
+
+sayilar='1234567890'
+for sayi in sayilar:
+    print(int(sayi*2))
+
+
+sayilar='1234567890'
+for sayi in sayilar:
+    print(int(sayilar))
+
+sayilar='1234567890'
+for sayi in sayilar:
+    if int(sayi)>3 and int(sayi)%2==0:
+        print(sayi)
+
+
+harfler=['a','b','c','d','e','f','g']
+for sesli in harfler:
+    if sesli=='a' or sesli=='e':
+        print(sesli)
+
+harfler=['a','b','c','d','e','f','g']
+for sesli in harfler:
+    print(sesli)
+    if sesli=='d':
+             break 
+
+
+#----------------------------------------------------------------------------------#
+
+#while döngüsü
+
+#Python sonzuz döngü =)
+a=1
+while a<10:
+    print(a)
+    
+
+a=1
+while a<10:
+    print(a)
+       a+=1
+
+#Daha komik bir sonsuz döngü
+a=1
+while a<10:
+    print(5*'Python sen acayip bir dilsin ! ')
+
+
+
+#Kontrol yapısı örneği
+while True:
+    TC=input("\nLütfen TC'nizi giriniz :")
+    AsilTC='123456789011'
+
+    if len(TC)!=12 or TC==str :
+        print("\nLütfen TC'nizi doğru giriniz !\nTC'niz 11 rakam olmalı ve harf içermemelidir !")
+        break
+    elif int(TC)==int(AsilTC):
+        print("TC'niz doğru Sisteme giriş yapabilirsiniz.")
+        break
+    else:
+        print("TC'niz doğru değildir !\nSisteme giriş yapamazsınız!!!")
+        break
+
+
+
+while True: 
+   metin=input('Lütfen girmek istediğiniz metni yazınız :')
+   if metin==str:
+       continue
+
+   elif metin==int or metin=='İPTAL':
+       break
+
+
+#----------------------------------------------------------------------------------#
+
+#range methodu ile işlemler
+for i in range(1,10):
+    print(i)
+
+for i in range(1,100,2):
+    print(i)
+
+for i in range(100,1,5):
+    print(i)
+
+print(*range(1,10))
+
+print(*range(1,10,2))
+
+#----------------------------------------------------------------------------------#
+#----------------------------------Alıştırmalar------------------------------------#
+
+# asal sayı kontrol
+sayac = 0
+sayi = int(input("Lütfen sayı giriniz : "))
+for i in range(2, int(sayi)):
+    if (int(sayi % i == 0)):
+        sayac += 1
+
+    if (sayac != 0):
+        print("Girdiğiniz ", sayi, "sayısı asal değildir")
+        break
+    else:
+        print("Girdiğiniz ", sayi, " sayısı asal bir sayıdır")
+        break
+
+
+#----------------------------------------------------------------------------------#
+
+# Girilen iki sayı arasındaki asal ve asal olmayan sayıları bulma
+asalSayi=[]
+asalOlmayan=[]
+sayi1 = int(input("Lütfen 1.sayıyı giriniz : "))
+sayi2 = int(input("Lütfen 2.sayıyı giriniz : "))
+
+print(sayi1," ile ",sayi2," arasındaki asal sayılar şunlardır : \n")
+for i in range(sayi1, sayi2+1):
+    if i>1:
+        for k in range(2,i):
+            if (i%k)==0 :
+                asalOlmayan.append(i)
+                break
+
+        else:
+            asalSayi.append(i)
+print(asalSayi)
+print("Girilen sayılar arasında ",len(asalSayi)," tane asal sayı vardır \n\n")
+print(asalOlmayan)
+print("Girilen sayılar arasında ",len(asalOlmayan)," asal olmayan sayı vardır ")
+
+
+#----------------------------------------------------------------------------------#
+
+
+
+
+
+'''
