@@ -395,7 +395,62 @@ print("Girilen sayılar arasında ",len(asalOlmayan)," asal olmayan sayı vardı
 
 #----------------------------------------------------------------------------------#
 
+#Hesap makinesi
+islemler='''
+(1)Toplama
+(2)Çıkartma
+(3)Çarpma
+(4)Bölme
+(5)Kare Alma
+(6)Kök Bulma
+(X)ÇIKIŞ YAP
+'''
+print(islemler)
+while True:
+    islem=input("\nHangi işlemi yapmak istiyorsunuz : ")
+    if islem=='X' or islem=='x':
+        print("Seçtiğiniz işlem : ÇIKIŞ YAP")
+        print("Çıkış Yapıldı !")
+        break
 
+    elif islem=="1":
+        sayi1 = int(input("Lütfen 1.sayıyı giriniz : "))
+        sayi2 = int(input("Lütfen 2.sayıyı giriniz : "))
+        print("Seçtiğiniz işlem : Toplama")
+        print(sayi1," + ",sayi2," = ",sayi1+sayi2)
+
+    elif islem=="2":
+        sayi1 = int(input("Lütfen 1.sayıyı giriniz : "))
+        sayi2 = int(input("Lütfen 2.sayıyı giriniz : "))
+        print("Seçtiğiniz işlem : Çıkartma ")
+        print(sayi1," - ",sayi2," = ",sayi1-sayi2)
+
+    elif islem=="3":
+        sayi1 = int(input("Lütfen 1.sayıyı giriniz : "))
+        sayi2 = int(input("Lütfen 2.sayıyı giriniz : "))
+        print("Seçtiğiniz işlem : Çarpma")
+        print(sayi1," x ",sayi2," = ",sayi1*sayi2)
+
+    elif islem=="4":
+        sayi1 = int(input("Lütfen 1.sayıyı giriniz : "))
+        sayi2 = int(input("Lütfen 2.sayıyı giriniz : "))
+        print("Seçtiğiniz işlem : Bölme")
+        print(sayi1," / ",sayi2," = ",sayi1/sayi2)
+
+    elif islem=="5":
+        sayi = int(input("Lütfen Karesini almak istediğiniz sayıyı giriniz : "))
+        print("Seçtiğiniz işlem : Kare Alma ")
+        print(sayi,"sayısının karesi "," = ",sayi**2)
+
+    elif islem=="6":
+        sayi = int(input("Lütfen Kökünü bulmak istediğiniz sayıyı giriniz : "))
+        print("Seçtiğiniz işlem : Kök Bulma")
+        print(sayi, "sayısının kökü ", " = ", sayi ** 3)
+
+    else:
+        print("----------------------------------------------------------------------------")
+        print("Yanlış Karakter girdiniz !\nLütfen aşağıdaki işlemlerden birini seçiniz ...")
+        print("----------------------------------------------------------------------------")
 
 
 
