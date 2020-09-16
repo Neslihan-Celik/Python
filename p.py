@@ -453,5 +453,52 @@ while True:
         print("----------------------------------------------------------------------------")
 
 
+#----------------------------------------------------------------------------------#
 
+#Random kullanımı
+
+import random
+aile=["nes","os","dil","mem","muc","tur","an","ba"]
+print("Rastgele seçilen kişi : ",random.choice(aile))
+
+
+
+#sayı tahmin oyunu
+
+import random
+gizliSayi=random.randint(1,50)
+sayac=0
+
+print("\nMerhaba sayı tahmin oyununa hoşgeldiniz !"
+       "\ngizli sayı 1 ile 50 arasındadır"
+      "\nYapmanız gereken en kısa sürede gizli sayıyı bulmak"
+      "\nBaşarılar !!!"
+      "\n(Çıkış yapmak için 0'ra basın)\n\n")
+
+while True:
+    sayac+=1
+    tahmin=int(input("Lütfen tahmininizi giriniz : "))
+    if tahmin==0:
+        print("\nÇıkış yapıldı !")
+        print("Doğru sayı {} idi !".format(gizliSayi),"\nSen {} tahminde bulundun .".format(sayac))
+        break
+
+    elif gizliSayi>tahmin:
+        print("Yaklaştın ama daha yüksek bir sayı girmelisin !\n")
+        continue
+
+    elif gizliSayi < tahmin:
+        print("Yaklaştın ama daha düşük bir sayı girmelisin !\n")
+        continue
+
+    else:
+        print("\n----------------------------------------")
+        print("Tabrikler tahminin doğru !\n"
+              "Doğru sayı ",gizliSayi,""
+              " sen {} denemede buldun . ".format(sayac))
+        print("----------------------------------------")
+        break
+
+
+#----------------------------------------------------------------------------------#  
 '''
