@@ -553,6 +553,83 @@ while True:
         continue
 
 
+#----------------------------------------------------------------------------------#  
+#----------------------------------Fonksiyonlar------------------------------------# 
+
+#Fonksiyon örnekleri
+
+def bilgiKutusu(ad,soyad,yas,cinsiyet,uyruk):
+    print("-"*30)
+    print("Ad :",ad)
+    print("Soyad :",soyad)
+    print("Yaş :",yas)
+    print("Cinsiyet :",cinsiyet)
+    print("Uyruk :",uyruk)
+    print("-" * 30)
+
+bilgiKutusu("xxx","xxxx","xxx","xxx","xxx")
+
+
+
+def ulkeTanitim(ulke,baskent,nufus,ulkeKodu):
+    ekranaBastir="Ülke :{}\nBaşkent :{}\nNüfus :{}\nÜlke Kodu :{}"
+    print("-"*30)
+    print(ekranaBastir.format(ulke,baskent,nufus,ulkeKodu))
+    print("-" * 30,"\n")
+
+ulkeTanitim("Türkiye","Ankara","83 Milyon","TR")
+ulkeTanitim("Ukrayna","Kiev","41 Milyon","UA")
+
+
+
+def adinNe():
+    ad=input("Adın ne :")
+    return ad
+
+print("\nMerhaba {}.\nNasılsın ".format(adinNe()))
+
+
+
+def kontrolYapisi(ifade):
+    if ifade==0:
+        print("Girdiğiniz sayı Sıfırdır !")
+
+    elif ifade<0:
+        print("Girdiğiniz sayı Negatiftir !")
+
+    else:
+        print("Girdiğiniz sayı Pozitiftir !")
+
+
+ifade=int(input("Litfen bir sayı girin : "))
+kontrolYapisi(ifade)
+
+
+
+
+def kontrol(x):
+    if x<0:
+        return "Negatif bir değer giremezsiniz"
+    else:
+        return x
+
+print(kontrol(-1))
+
+
+list=["meyve","sebze"]
+
+def liste():
+    global list #Bu yapıyı bil ama kullanma !
+    list.append("tahıl")
+    return list
+print("Liste öğeleri :\n",liste())
+
+
+
+#lambda yapısı (küçük fonksiyon)
+
+fonk=lambda sayi1,sayi2:sayi1+sayi2
+print(fonk(2899,199))
 
 
 
