@@ -501,4 +501,59 @@ while True:
 
 
 #----------------------------------------------------------------------------------#  
+
+#Sisteme kullanıcı giriş kontrolü
+
+print("\nHoşgeldiniz !\nLütfen kullanıcı adınızı ve şifrenizi giriniz !\n")
+print("---------------------------")
+kullaniciAdi=input("Kullanıcı Adınız : ")
+sifre=input("Şifreniz : ")
+print("---------------------------\n")
+
+sayac=1
+Admin="nes"
+Password="1234"
+
+while True:
+
+    if sayac==5:
+        print("\n{} hatalı giriş denemesi".format(sayac),"\nSistemden çıkartıldınız !")
+        break
+
+
+    elif kullaniciAdi==Admin and sifre==Password:
+        print("Merhaba Admin \nSisteme başarılı bir şekilde giriş yaptınız !")
+        break
+
+    elif kullaniciAdi==Admin and sifre!=Password:
+        print("Girdiğiniz şifre yanlış tekrar deneyin!")
+        print("---------------------------")
+        kullaniciAdi = input("Kullanıcı Adınız : ")
+        sifre = input("Şifreniz : ")
+        print("---------------------------\n")
+        sayac+=1
+        continue
+
+    elif kullaniciAdi!=Admin and sifre==Password:
+        print("Girdiğiniz kullanıcı adı yanlış tekrar deneyin!")
+        print("---------------------------")
+        kullaniciAdi = input("Kullanıcı Adınız : ")
+        sifre = input("Şifreniz : ")
+        print("---------------------------\n")
+        sayac += 1
+        continue
+
+    elif kullaniciAdi!=Admin and sifre!=Password:
+        print("Girdiğiniz kullanıcı adı  ve şifre yanlış tekrar deneyin!")
+        print("---------------------------")
+        kullaniciAdi = input("Kullanıcı Adınız : ")
+        sifre = input("Şifreniz : ")
+        print("---------------------------\n")
+        sayac += 1
+        continue
+
+
+
+
+
 '''
