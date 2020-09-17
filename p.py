@@ -173,13 +173,13 @@ if secim == 'elma':
     fiyat = 4  # Type int
 
     if kilo == 1:
-        print("\nSeçtiğiniz meyve :", secim, "\nİstediğiniz miktar :", kilo,"kilo", "\nÖdemeniz greken tutar :", fiyat , "TL")
+        print("\nSeçtiğiniz meyve :", secim, "\nİstediğiniz miktar :", kilo,"kilo", "\nÖdemeniz gereken tutar :", fiyat , "TL")
 
     elif kilo == 2:
-        print("\nSeçtiğiniz meyve :", secim, "\nİstediğiniz miktar :", kilo,"kilo","\nÖdemeniz greken tutar :", fiyat * 2,"TL")
+        print("\nSeçtiğiniz meyve :", secim, "\nİstediğiniz miktar :", kilo,"kilo","\nÖdemeniz gereken tutar :", fiyat * 2,"TL")
 
     elif kilo ==3:
-        print("\nSeçtiğiniz meyve :", secim, "\nİstediğiniz miktar :", kilo,"kilo", "\nÖdemeniz greken tutar :", fiyat * 3, "TL")
+        print("\nSeçtiğiniz meyve :", secim, "\nİstediğiniz miktar :", kilo,"kilo", "\nÖdemeniz gereken tutar :", fiyat * 3, "TL")
 
     else:
         print("\nManavda istediğiniz miktarda meyve bulunmamaktadır!")
@@ -190,13 +190,13 @@ elif secim == 'armut':
     fiyat = 5  # Type int
 
     if kilo == 1:
-        print("\nSeçtiğiniz meyve :", secim, "\nİstediğiniz miktar :", kilo, "kilo","\nÖdemeniz greken tutar :", fiyat , "TL")
+        print("\nSeçtiğiniz meyve :", secim, "\nİstediğiniz miktar :", kilo, "kilo","\nÖdemeniz gereken tutar :", fiyat , "TL")
 
     elif kilo == 2:
-        print("\nSeçtiğiniz meyve :", secim, "\nİstediğiniz miktar :", kilo, "kilo","\nÖdemeniz greken tutar :", fiyat * 2, "TL")
+        print("\nSeçtiğiniz meyve :", secim, "\nİstediğiniz miktar :", kilo, "kilo","\nÖdemeniz gereken tutar :", fiyat * 2, "TL")
 
     elif kilo ==3:
-        print("\nSeçtiğiniz meyve :", secim, "\nİstediğiniz miktar :" ,kilo,"kilo","\nÖdemeniz greken tutar :", fiyat * 3, "TL")
+        print("\nSeçtiğiniz meyve :", secim, "\nİstediğiniz miktar :" ,kilo,"kilo","\nÖdemeniz gereken tutar :", fiyat * 3, "TL")
 
     else:
         print("\nManavda istediğiniz miktarda meyve bulunmamaktadır!")
@@ -207,13 +207,13 @@ elif secim == 'üzüm':
     fiyat = 7  # Type int
 
     if kilo == 1:
-        print("\nSeçtiğiniz meyve :", secim, "\nİstediğiniz miktar :", kilo, "kilo","\nÖdemeniz greken tutar :", fiyat , "TL")
+        print("\nSeçtiğiniz meyve :", secim, "\nİstediğiniz miktar :", kilo, "kilo","\nÖdemeniz gereken tutar :", fiyat , "TL")
 
     elif kilo == 2:
-        print("\nSeçtiğiniz meyve :", secim, "\nİstediğiniz miktar :", kilo, "kilo","\nÖdemeniz greken tutar :", fiyat * 2, "TL")
+        print("\nSeçtiğiniz meyve :", secim, "\nİstediğiniz miktar :", kilo, "kilo","\nÖdemeniz gereken tutar :", fiyat * 2, "TL")
 
     elif kilo ==3:
-        print("\nSeçtiğiniz meyve :", secim, "\nİstediğiniz miktar :" ,kilo,"kilo","\nÖdemeniz greken tutar :", fiyat * 3, "TL")
+        print("\nSeçtiğiniz meyve :", secim, "\nİstediğiniz miktar :" ,kilo,"kilo","\nÖdemeniz gereken tutar :", fiyat * 3, "TL")
 
     else:
         print("\nManavda istediğiniz miktarda meyve bulunmamaktadır!")
@@ -224,13 +224,13 @@ elif secim == 'muz':
     fiyat = 11  # Type int
 
     if kilo == 1:
-        print("\nSeçtiğiniz meyve :", secim, "\nİstediğiniz miktar :", kilo, "kilo","\nÖdemeniz greken tutar :", fiyat , "TL")
+        print("\nSeçtiğiniz meyve :", secim, "\nİstediğiniz miktar :", kilo, "kilo","\nÖdemeniz gereken tutar :", fiyat , "TL")
 
     elif kilo == 2:
-        print("\nSeçtiğiniz meyve :", secim, "\nİstediğiniz miktar :", kilo, "kilo","\nÖdemeniz greken tutar :", fiyat * 2, "TL")
+        print("\nSeçtiğiniz meyve :", secim, "\nİstediğiniz miktar :", kilo, "kilo","\nÖdemeniz gereken tutar :", fiyat * 2, "TL")
 
     elif kilo ==3:
-        print("\nSeçtiğiniz meyve :", secim, "\nİstediğiniz miktar :" ,kilo,"kilo","\nÖdemeniz greken tutar :", fiyat * 3, "TL")
+        print("\nSeçtiğiniz meyve :", secim, "\nİstediğiniz miktar :" ,kilo,"kilo","\nÖdemeniz gereken tutar :", fiyat * 3, "TL")
 
     else:
         print("\nManavda istediğiniz miktarda meyve bulunmamaktadır!")
@@ -571,6 +571,7 @@ bilgiKutusu("xxx","xxxx","xxx","xxx","xxx")
 
 
 
+
 def ulkeTanitim(ulke,baskent,nufus,ulkeKodu):
     ekranaBastir="Ülke :{}\nBaşkent :{}\nNüfus :{}\nÜlke Kodu :{}"
     print("-"*30)
@@ -582,11 +583,13 @@ ulkeTanitim("Ukrayna","Kiev","41 Milyon","UA")
 
 
 
+
 def adinNe():
     ad=input("Adın ne :")
     return ad
 
 print("\nMerhaba {}.\nNasılsın ".format(adinNe()))
+
 
 
 
@@ -632,5 +635,56 @@ fonk=lambda sayi1,sayi2:sayi1+sayi2
 print(fonk(2899,199))
 
 
+#faktöriyel hesaplama
 
-'''
+def faktoriel(x):
+  if x==0:
+      return 1
+  else:
+      return x*faktoriel(x-1)
+
+x=int(input("Faktöriyelini hesaplamak istediğiniz sayıyı girin : "))
+print(faktoriel(x))
+
+
+
+#geometrik hesaplama örneği
+def daire():
+    print("-"*30,"\nSeçim : Daire \n")
+    yaricap=input("\nÇevresini ve Alanını hesaplamak istediğiniz Dairenin Yarıçapını girin : ")
+    cevre=(2*3.14*float(yaricap))
+    alan=(3.14*float(yaricap)*float(yaricap))
+    print("\n")
+    print("-"*30)
+    print("Dairenin Alanı : {}\nDairenin Çevresi : {}".format(alan,cevre))
+    print("-" * 30)
+
+def dikdortgen():
+    print()
+
+
+def ucgen():
+    print()
+
+
+def kup():
+    print()
+
+
+sec=int(input("Daire = 1\nDikdörtgen = 2\nÜçgen = 3\nKüp = 4\nÇıkış yapmak için herhangi bir karakter girin !\nHangisi için işlem yapacaksınız \n\nLütfen kodu girin : "))
+
+while True:
+    if sec == 1:
+        daire()
+        break
+    elif sec==2:
+        ucgen()
+        break
+    elif sec==3:
+        dikdortgen()
+        break
+    elif sec==4:
+        kup()
+        break
+    else:
+        break
