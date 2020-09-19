@@ -371,26 +371,7 @@ for i in range(2, int(sayi)):
 
 #----------------------------------------------------------------------------------#
 
-# Girilen iki sayı arasındaki asal ve asal olmayan sayıları bulma
-asalSayi=[]
-asalOlmayan=[]
-sayi1 = int(input("Lütfen 1.sayıyı giriniz : "))
-sayi2 = int(input("Lütfen 2.sayıyı giriniz : "))
 
-print(sayi1," ile ",sayi2," arasındaki asal sayılar şunlardır : \n")
-for i in range(sayi1, sayi2+1):
-    if i>1:
-        for k in range(2,i):
-            if (i%k)==0 :
-                asalOlmayan.append(i)
-                break
-
-        else:
-            asalSayi.append(i)
-print(asalSayi)
-print("Girilen sayılar arasında ",len(asalSayi)," tane asal sayı vardır \n\n")
-print(asalOlmayan)
-print("Girilen sayılar arasında ",len(asalOlmayan)," asal olmayan sayı vardır ")
 
 
 #----------------------------------------------------------------------------------#
@@ -647,7 +628,7 @@ x=int(input("Faktöriyelini hesaplamak istediğiniz sayıyı girin : "))
 print(faktoriel(x))
 
 
-
+#----------------------------------------------------------------------------------# 
 #geometrik hesaplama örneği
 def daire():
     print("-"*30,"\nSeçim : Daire \n")
@@ -660,31 +641,152 @@ def daire():
     print("-" * 30)
 
 def dikdortgen():
-    print()
-
+    print("-" * 30, "\nSeçim : Dikdörtgen \n")
+    uzunKenar=int(input("Lütfen Dikdörgen\'in Uzun kenar uzunluğunu giriniz : "))
+    kisaKenar = int(input("Lütfen Dikdörgen\'in Kısa kenar uzunluğunu giriniz : "))
+    alan=uzunKenar*kisaKenar
+    cevre=2*(uzunKenar+kisaKenar)
+    print("\n")
+    print("-" * 30)
+    print("Dikdörtgen\'in  Alanı : {}\nDikdörtgen\'in Çevresi : {}".format(alan, cevre))
+    print("-" * 30)
 
 def ucgen():
-    print()
-
+    print("-" * 30, "\nSeçim : Üçgen (Çeşitkenar) \n")
+    birinciKenar = int(input("Lütfen birinci kenar uzunluğunu giriniz : "))
+    ikinciKenar = int(input("Lütfen ikinci  kenar uzunluğunu giriniz : "))
+    ucuncuKenar = int(input("Lütfen üçüncü  kenar uzunluğunu giriniz : "))
+    x=(birinciKenar+ikinciKenar+ucuncuKenar)/2
+    alan=(x*(x-birinciKenar)*(x-ikinciKenar)*(x-ucuncuKenar))**(0.5)
+    cevre=(birinciKenar+ikinciKenar+ucuncuKenar)
+    print("\n")
+    print("-" * 30)
+    print("Üçgen\'in  Alanı : {}\nÜçgen\'in Çevresi : {}".format(alan, cevre))
+    print("-" * 30)
 
 def kup():
-    print()
+    print("-" * 30, "\nSeçim : Küp \n")
+    kenarUzunluk = int(input("Lütfen Küp\'ün bir  kenar uzunluğunu giriniz : "))
+    cevre=kenarUzunluk*12
+    alan=6*kenarUzunluk**2
+    hacim=kenarUzunluk**3
+    print("\n")
+    print("-" * 30)
+    print("Küp\'ün  Alanı : {}\nKüp\'ün Çevresi : {}\nKüp\'ün Hacmi : {}".format(alan, cevre,hacim))
+    print("-" * 30)
+
+def kare():
+    print("-" * 30, "\nSeçim : Kare \n")
+    kenar = int(input("Lütfen Kare\'nin bir  kenar uzunluğunu giriniz : "))
+    alan=kenar**2
+    cevre=4*kenar
+    print("\n")
+    print("-" * 30)
+    print("Kare\'nin  Alanı : {}\nKare\'nin Çevresi : {}".format(alan, cevre))
+    print("-" * 30)
+
+def silindir():
+    print("-" * 30, "\nSeçim : Silindir \n")
+    yukseklik = int(input("Lütfen Silindir\'in yüksekliğini giriniz : "))
+    yaricap = int(input("Lütfen Silindir\'in yarıçapını giriniz : "))
+    alan=(2*3.14*yaricap*(yaricap+yukseklik))
+    hacim=(3.14*(yaricap**2)*yukseklik)
+    print("\n")
+    print("-" * 30)
+    print("Silindir\'in Alanı : {}\nSilindir\'in Hacmi : {}".format(alan, hacim))
+    print("-" * 30)
+
+def cikis():
+    print("Sistemde tanımsız bir karakter girdiğiniz için Çıkış yaptınız !!!")
 
 
-sec=int(input("Daire = 1\nDikdörtgen = 2\nÜçgen = 3\nKüp = 4\nÇıkış yapmak için herhangi bir karakter girin !\nHangisi için işlem yapacaksınız \n\nLütfen kodu girin : "))
+sec=input("Daire = 1\nDikdörtgen = 2\nÜçgen = 3\nKüp = 4\nKare = 5\nSilindir = 6\nÇIKIŞ için herhangi bir karekter girin !\nHangisi için işlem yapacaksınız ? \n\nLütfen kodu girin : ")
 
 while True:
-    if sec == 1:
+    if sec == "1":
         daire()
         break
-    elif sec==2:
-        ucgen()
-        break
-    elif sec==3:
+    elif sec=="2":
         dikdortgen()
         break
-    elif sec==4:
+    elif sec=="3":
+        ucgen()
+        break
+    elif sec=="4":
         kup()
         break
+    elif sec == "5":
+        kare()
+        break
+    elif sec == "6":
+        silindir()
+        break
     else:
+        cikis()
+        break
+
+
+
+
+#----------------------------------------------------------------------------------# 
+#ebob ekok  alıştırması
+
+def ebob():
+    print("\nSeçim = Ebob\n")
+    sayi1 = int(input("1. Sayıyı girin : "))
+    sayi2 = int(input("2. Sayıyı girin : "))
+    kucukSayi=min(sayi1,sayi2)
+    bolenler=[]
+    for i in range(1,kucukSayi+1):
+        if sayi1%i==0 and sayi2%i==0:
+            bolenler.append(i)
+    bolenler.sort(reverse=True)
+    if len(bolenler)==0:
+        return print("\nEbob({},{}) = {}".format(sayi1, sayi2,1))
+    return print("\nEbob({},{}) = {}".format(sayi1, sayi2, bolenler[0]))
+
+def ekok():
+    print("\nSeçim = Ekok\n")
+    sayi1 = int(input("1. Sayıyı girin : "))
+    sayi2 = int(input("2. Sayıyı girin : "))
+    carpim=sayi1*sayi2
+    sayi1Katlari=set()
+    sayi2Katlari=set()
+    for i in range(1,carpim):
+        if sayi1*1!=carpim:
+            sayi1Katlari.add(sayi1*i)
+        else:
+            break
+
+    for k in range(1,carpim):
+        if sayi2*k!=carpim:
+            sayi2Katlari.add(sayi2*k)
+        else:
+            break
+
+    kesisim=sayi1Katlari.intersection(sayi2Katlari)
+    liste=list(kesisim)
+    if len(liste)==0:
+        return print("\nEkok({},{}) = {}".format(sayi1,sayi2,carpim))
+    else:
+        return print("\nEkok({},{}) = {}".format(sayi1,sayi2,liste[0]))
+
+
+
+
+
+
+secim=input("\nEkok=1\nEbob=2\nÇIKIŞ için herhangi bir karakter girin \n\nHangisi için işlem yapcaksınız : ")
+
+while True:
+    if secim=="1":
+        ekok()
+        break
+
+    elif secim=="2":
+        ebob()
+        break
+
+    else:
+        print("\nYanlış karakter girdiniz !\nÇıkış yaptınız !!!")
         break
