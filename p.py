@@ -1070,3 +1070,61 @@ print(list.index("c")+1)
 
 
 #----------------------------------------------------------------------------------# 
+#----------------------------------Sözlük methodları-------------------------------#
+
+#keys-values-items
+
+sozluk={"a":0,"b":1,"c":2,"d":3,"e":4}
+print(sozluk.keys())
+
+sozluk={"a":0,"b":1,"c":2,"d":3,"e":4}
+print(sozluk.values())
+
+sozluk={"a":0,"b":1,"c":2,"d":3,"e":4}
+print(sozluk.items())
+
+
+
+ingSozluk={"dil":"language","insan":"human","bilgisayar":"computer","masa":"table"}
+
+sorgu=input("Çevirmek istediğiniz kelimeyi girin : ")
+
+if sorgu not in ingSozluk:
+    print("\nAradığınız kelimenin sözlüğümüzde bir karşılığı yoktur !")
+else:
+    print("\nAradığınız kelimenin ingilizce karşılığı : ",ingSozluk[sorgu])
+
+
+#get
+
+ingSozluk={"dil":"language","insan":"human","bilgisayar":"computer","masa":"table"}
+sorgu=input("Çevirmek istediğiniz kelimeyi girin : ")
+
+print(ingSozluk.get(sorgu,"\nAradığınız kelimenin sözlükte karşılığı yok !"))
+
+
+#fromkeys
+
+kisiler="Ayça AY","Ahmet GÜN","Selim YIL","Feyza YÜZYIL"
+adresler=dict.fromkeys(kisiler,"İstanbul")
+
+print(adresler)
+
+
+#setdefault
+
+sepet={"meyve":{"muz","elma","kiraz"},"sebze":{"domates","salatalık","patlıcan"}}
+sepet.setdefault("tahıl",{"mercimek","nohut","buğday"})
+print(sepet)
+
+
+#update
+
+stokListe={"kola":15,"gazoz":20,"su":30,"meyve suyu":20}
+yeniStok={"kola":9,"gazoz":12,"su":19,"meyve suyu":16}
+stokListe.update(yeniStok)
+print(stokListe)
+
+
+
+#----------------------------------------------------------------------------------# 
