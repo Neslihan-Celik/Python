@@ -790,3 +790,205 @@ while True:
     else:
         print("\nYanlış karakter girdiniz !\nÇıkış yaptınız !!!")
         break
+
+
+
+
+#----------------------------------------------------------------------------------# 
+#-----------------------------------Methodlar--------------------------------------# 
+#-----------------------------------Karakter Methodları----------------------------# 
+
+#dir methodu
+
+sayac=0
+for i in dir(" "):
+    if "_" not in i[0]:
+        sayac+=1
+        print(sayac,i)
+
+print("\nToplam {} method  vardır .".format(sayac))
+
+
+
+#enumerate methodu
+
+a="TürkiyeCumhuriyetininNüfusu83Milyondur"
+print(*enumerate(a))
+
+
+
+#daha kullanışlı versiyon
+
+for sira,method in enumerate(dir("")):
+    print(sira+1,method)
+
+
+
+#replace
+
+x="Ağri dağinin eteğinde"
+print(x.replace("ğ","g"))
+
+
+
+#split
+
+x="Bir yıl üçyüz atmış beş gündür."
+print(x.split(" "))
+
+
+i="Türkiye Büyük Millet Meclisi "
+for k in i.split(" "):
+    print(k)
+
+
+
+#capitalize
+
+i="TÜRKİYE'NİN BAŞKENTİ ÇOK GÜZELDİR."
+print(i,"\n",i.capitalize())
+
+
+
+#title
+
+i="merhaba ben neslihan."
+print(i.title())
+
+
+
+#swapcase
+
+i="yAZI yAZMAYI hEP çOK sEVDİM dER şAİR."
+print(i.swapcase())
+
+
+
+#strip ve split kullanımı
+
+metin='''
+<liste 
+<birinci 
+<ikinci
+<üçüncü 
+<...
+<... '''
+
+for i in metin.split():
+    print(i.strip("<"))
+
+
+
+#join
+
+x="Elektrik Elektronik Mühendisliği"
+bolum=x.split()
+print(x)
+print(bolum)
+print(" ".join(bolum))
+
+
+#count
+
+metin='''abcdhjdhwıyueqwhuaaaagqwwhuowejemmfv
+ççvçmnnhwueıuuqteqqğqünnnnqüplööasmdwdheaaeararar
+fwferıhereereruferueyrbbbbuurwıurfeıuwrfwuıfer'''
+
+print("Metin içerisindeki 'n' harfi sayısı : ",metin.count("n"))
+
+
+
+
+sifrebelirle=input("Lütfen yeni bir şifre belirleyiniz : ")
+
+kontrol=True
+for i in sifrebelirle:
+    if sifrebelirle.count(i)>1:
+        kontrol=False
+
+if kontrol:
+    print("Yeni şifreniz onaylandı !")
+else:
+    print("Şifrenizde bir karakteri yanlız bir kere kullanabilirsiniz !!!")
+
+
+
+#index
+
+x="istanbul"
+print(x.index("n"))
+
+
+
+#center
+
+x="istanbul"
+print(x.center(50))
+
+
+#Bu yapı çok kullanışlı !
+x="BAŞLIK" 
+print(x.center(100,"-"))
+
+
+
+#rjust ve ljust
+#En güzel özellik =)
+
+x="İstanbul"
+print(x.rjust(15,"."))
+
+x="Sen"
+print(x.ljust(15,"."))
+
+x="Bir"
+print(x.rjust(15,"."))
+
+x="Şiirsin"
+print(x.ljust(15,"."))
+
+
+
+for i in "elma","armut","muz","karpuz","kavun","......":
+    print(i.ljust(10,"."))
+
+
+
+#maketrans ve translate
+#vazgeçtim en yararlı methodlar bunlar 
+
+kaynak="çşğıöüŞÇĞÜÖİ"
+hedef="csgiouSCGUOI"
+ceviri=str.maketrans(kaynak,hedef)
+metin="Şanlıurfa ve Ağrı Türkiye'de bulunan şehirlerdir. şğöçİ "
+print(metin.translate(ceviri))
+
+
+
+#isalpha
+
+a="evimEvimGüzelEvim"
+print(a.isalpha())
+
+a="evim Evim Güzel Evim"
+print(a.isalpha())
+
+
+
+#isdigit
+
+a="1234567890"
+print(a.isdigit())
+
+a="1234567890sayi"
+print(a.isdigit())
+
+
+#isalnum
+
+a="1234567890sayi"
+print(a.isalnum())
+
+
+
+#----------------------------------------------------------------------------------# 
