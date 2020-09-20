@@ -1,4 +1,4 @@
-'''
+
 #----------------------------Python Alıştırmaları----------------------------------#
 #----------------------------------------------------------------------------------#
 #basit işlemler
@@ -370,10 +370,6 @@ for i in range(2, int(sayi)):
 
 
 #----------------------------------------------------------------------------------#
-
-
-
-
 #----------------------------------------------------------------------------------#
 
 #Hesap makinesi
@@ -479,6 +475,7 @@ while True:
               " sen {} denemede buldun . ".format(sayac))
         print("----------------------------------------")
         break
+
 
 
 #----------------------------------------------------------------------------------#  
@@ -629,7 +626,9 @@ print(faktoriel(x))
 
 
 #----------------------------------------------------------------------------------# 
+
 #geometrik hesaplama örneği
+
 def daire():
     print("-"*30,"\nSeçim : Daire \n")
     yaricap=input("\nÇevresini ve Alanını hesaplamak istediğiniz Dairenin Yarıçapını girin : ")
@@ -729,6 +728,7 @@ while True:
 
 
 #----------------------------------------------------------------------------------# 
+
 #ebob ekok  alıştırması
 
 def ebob():
@@ -988,6 +988,84 @@ print(a.isdigit())
 
 a="1234567890sayi"
 print(a.isalnum())
+
+
+
+#----------------------------------------------------------------------------------# 
+#-----------------------------------Liste Methodları-------------------------------# 
+
+
+#liste methodları
+
+for i in dir(list):
+    if not "_"in i:
+        print(i)
+
+
+#append
+
+liste=["ayı","kuş","tilki","timsah","inek","leylek"]
+liste.append("devekuşu")
+print(liste)
+
+
+#append sadece bir parametre alıyor çoklu alım için döngü kullan !
+sayiList=[1,2,3,4]
+for i in[5,6,7,8,9,0]:
+    sayiList.append(i)
+
+print(sayiList)
+
+
+#extend
+
+liste1=[0,9,8,7,6]
+liste2=[5,4,3,2,1]
+liste1.extend(liste2)
+print(liste1)
+
+
+#insert
+
+a=[1,2,3,4]
+a.insert(0,0)
+print(a)
+
+
+#remove
+
+list=[1,2,3,4,5,7,6,7,8,9,0]
+list.remove(7)
+print(list)
+
+
+#reverse
+
+x=["dünya","ay","venüs","uranüs","jüpiter","neptün"]
+y=["n","a","h","i","l","s","e","N"]
+x.reverse()
+y.reverse()
+print(x)
+print(y)
+
+
+#sort
+
+sayilar=[3,5,9,-8,-6,-20,1,11,45,0]
+sayilar.sort()
+print(sayilar)
+
+
+#sort ve reverse birlikte 
+sayiList=[1,10,100,1000,10000]
+sayiList.sort(reverse=True)
+print(sayiList)
+
+
+#index
+
+list=["a","b","c","d","e"]
+print(list.index("c")+1)
 
 
 
