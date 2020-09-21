@@ -1128,3 +1128,76 @@ print(stokListe)
 
 
 #----------------------------------------------------------------------------------# 
+#-----------------------------------Küme methodları--------------------------------#
+
+for i in dir(set):
+    if "__"not in i:
+        print(i)
+
+
+
+#add
+
+küme=set(["kedi","kuş","köpek","yılan"])
+küme.add("koyun")
+print(küme)
+
+
+#difference
+
+liste1=set([0,1,2,3,4,5])
+liste2=set([4,5,6,7,8,9])
+
+print("liste1\'de olup liste2\'de olmayan elemenalar : ",liste1.difference(liste2))
+print("liste2\'de olup liste1\'de olmayan elemenalar : ",liste2.difference(liste1))
+#farklı  ve pratik kullanım
+print(liste1-liste2)
+print(liste2-liste1)
+
+
+
+#difference_update
+
+list1=set(["a","b","c"])
+list2=set(["c","d","b","e"])
+list1.difference_update(list2)
+print("iki liste farkı :",list1)
+
+
+#discard
+
+gezegenler=set(["Dünya","Plüton","Neptün","Venüs","Jüpiter"])
+gezegenler.discard("Plüton")  #Plüton gezegen değilsin artık üzgünüm =)
+print(gezegenler)
+
+
+
+#intersection
+
+sayiList1=set([1,2,3,4,5,6,7])
+sayiList2=set([6,7,8,9,0])
+
+print("iki listenin ortak elemanları : ",sayiList1.intersection(sayiList2))
+#daha kullanışlı yapı
+print("iki listenin ortak elemanları : ",sayiList1&sayiList2)
+
+
+#union
+
+a=set([1,2,3,4,5])
+b=set([6,7,8,9,0])
+print("iki kümenin birleşimi :",a.union(b))
+#pratik kullanım
+print("iki kümenin birleşimi :",a|b)
+
+
+
+#symmetric_difference
+
+a=set([0,1,2,3,4,5])
+b=set([3,4,5,6,7,8,9])
+print("iki kümenin ortak elemanları : ",a.intersection(b))
+print("İki kümenin ortak olmayan elemanları : ",a.symmetric_difference(b))
+
+
+#----------------------------------------------------------------------------------# 
