@@ -1233,3 +1233,55 @@ else:
     
 #----------------------------------------------------------------------------------# 
 #-----------------------------------Modüller---------------------------------------#
+
+
+#random
+
+import random
+print(dir(random))
+
+
+
+import random
+liste=[random.randint(0,100) for i in range(10)]
+print(liste)
+
+
+
+import random
+sayi=int(input("Kaç adet rastgele sayı üretmek istiyorsunuz :"))
+aralik=int(input("Sayı sınırınız nedir :"))
+sayiList=[random.randint(0,aralik) for i in range(sayi)]
+print("Sayı listeniz:",sayiList)
+
+
+
+import random
+print("Dosya\n{} \nadresinde  bulunuyor .".format(random.__file__))
+
+
+#modul1 modülü
+sozluk={"kitap":"book","elma":"apple","bilgisayar":"computer"}
+
+def ceviri(kelime):
+    hata="{} kelimesinin sözlükte karşılığı bulunmuyor !"
+    return sozluk.get(kelime,hata.format(kelime))
+
+
+import modul1
+print("Aranan kelimenin karşılığı :",modul1.ceviri("ayak"))
+print("Aranan kelimenin karşılığı :",modul1.ceviri("elma"))
+
+
+#ikiliKontrol modülü
+sayi=int(input("Binary karşılığını görmek istediğiniz sayıyı yazın :"))
+if True:
+    print("\nGirdiğiniz sayının bit uzunluğu :",(sayi).bit_length(),"\nİkili sistemdeki karşılığı : ",bin(sayi)[2:])
+else:
+    print("Hata!")
+    
+    
+import ikiliKontrol
+print(ikiliKontrol)
+
+#----------------------------------------------------------------------------------# 
