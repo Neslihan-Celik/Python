@@ -1201,3 +1201,35 @@ print("İki kümenin ortak olmayan elemanları : ",a.symmetric_difference(b))
 
 
 #----------------------------------------------------------------------------------# 
+#-----------------------------------sayı methodları--------------------------------#
+
+
+#bin-len
+
+print("-"*25)
+print("sayı\tbinary\t bit")
+print("-"*25)
+for i in range(11):
+    print(i,bin(i)[2:], len(bin(i)[2:]),sep=" \t  ")
+print("-"*25)
+
+
+
+#bit_lenght
+
+sayi=10
+print("Girilen sayı ikilik sistemde {} bit yer kaplar .".format(sayi.bit_length()))
+
+
+#Binary dönüştürücü
+
+sayi=int(input("Binary karşılığını görmek istediğiniz sayıyı yazın :"))
+if True:
+    print("\nGirdiğiniz sayının bit uzunluğu :",(sayi).bit_length(),"\nİkili sistemdeki karşılığı : ",bin(sayi)[2:])
+else:
+    print("Hata!")
+
+
+    
+#----------------------------------------------------------------------------------# 
+#-----------------------------------Modüller---------------------------------------#
