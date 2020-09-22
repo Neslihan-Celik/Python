@@ -1284,4 +1284,113 @@ else:
 import ikiliKontrol
 print(ikiliKontrol)
 
+
+
+#----------------------------------------------------------------------------------# 
+#--------------------------------Hata ayıklama-------------------------------------# 
+
+
+#try-except
+
+print("\nKarekök hesaplayıcısına hoşgeldiniz.\n")
+sayi1=input("Sayı giriniz : ")
+
+
+try:
+    ilkSayi=int(sayi1)
+    karekok=(ilkSayi)**0.5
+    print("Sonuç : ",karekok)
+except ValueError:
+    print("Lütfen bir tam sayı giriniz !")
+
+
+
+ilkSayi=input("1.sayıyı giriniz : ")
+ikinciSayi=input("2.sayıyı giriniz : ")
+try:
+    sayi1=int(ilkSayi)
+    sayi2=int(ikinciSayi)
+    print("\nSonuç :\n{} / {} = {}".format(sayi1,sayi2,sayi1/sayi2))
+except ValueError:
+    print("\n")
+    print("-"*35)
+    print("\nLütfen tam sayı girin !\n")
+    print("-" * 35)
+except ZeroDivisionError:
+    print("\n")
+    print("-" * 35)
+    print("\nHerhangi bir sayı sıfıra bölünemez !\n")
+    print("-" * 35)
+finally:
+    print("\nProgram çalıştırılıp kapatıldı !")
+
+
+
+#----------------------------------------------------------------------------------# 
+#--------------------------------Dosya işlemleri-----------------------------------# 
+
+#open-close-write-read
+
+dosya=open("c:/ders/deneme.txt","w")
+dosya.close()
+
+
+dosya=open("c:/ders/dosya.txt","w")
+dosya.write("Dosyaya yazır yazıldı !")
+dosya.close()
+
+
+
+dosya=open("c:/ders/borcluListesi.txt","w")
+dosya.write("Ela : 100\n")
+dosya.write("Ahmet : 500\n")
+dosya.write("Veli : 700\n")
+dosya.write("Sena : 250\n")
+dosya.write("Cemal : 1000\n")
+dosya.close()
+
+bocluListesi=open("c:/ders/borcluListesi.txt")
+print(bocluListesi.read())
+bocluListesi.close()
+
+bocluListesi=open("c:/ders/borcluListesi.txt","w")
+bocluListesi.write("Suat : 950")
+bocluListesi.close()
+
+
+#readlines-readline
+
+dosya=open("c:/ders/alisverisListesi.txt","w")
+dosya.write("Pirinc\n")
+dosya.write("Yag\n")
+dosya.write("Zeytin\n")
+dosya.write("Ekmek\n")
+dosya.write("Tavuk\n")
+dosya.write("Sut\n")
+dosya.close()
+
+liste=open("c:/ders/alisverisListesi.txt")
+alisverisListesi=liste.readlines()
+print("Birinci eleman :",alisverisListesi[0])
+print(alisverisListesi[3])
+liste.close()
+
+
+
+dosya=open("c:/ders/alisverisListesi.txt","w")
+dosya.write("Pirinc\n")
+dosya.write("Yag\n")
+dosya.write("Zeytin\n")
+dosya.write("Ekmek\n")
+dosya.write("Tavuk\n")
+dosya.close()
+
+liste=open("c:/ders/alisverisListesi.txt")
+print(liste.readline())
+print(liste.readline())
+print(liste.readline())
+liste.close()
+
+
+#----------------------------------------------------------------------------------# 
 #----------------------------------------------------------------------------------# 
