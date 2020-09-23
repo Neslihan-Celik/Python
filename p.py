@@ -1336,7 +1336,7 @@ dosya.close()
 
 
 dosya=open("c:/ders/dosya.txt","w")
-dosya.write("Dosyaya yazır yazıldı !")
+dosya.write("Dosyaya yazı yazıldı !")
 dosya.close()
 
 
@@ -1353,7 +1353,7 @@ bocluListesi=open("c:/ders/borcluListesi.txt")
 print(bocluListesi.read())
 bocluListesi.close()
 
-bocluListesi=open("c:/ders/borcluListesi.txt","w")
+bocluListesi=open("c:/ders/borcluListesi.txt","a")
 bocluListesi.write("Suat : 950")
 bocluListesi.close()
 
@@ -1393,4 +1393,89 @@ liste.close()
 
 
 #----------------------------------------------------------------------------------# 
-#----------------------------------------------------------------------------------# 
+#---------------------------Nesne tabanlı programlama------------------------------# 
+
+
+# class yapısı
+
+class insan:
+    yas=0
+    boy=0
+    kilo=0
+    isim=""
+    soyisim=""
+    dogumTarihi=0
+    bugununTarihi=0
+    def yasHesapla(self):
+        yas=self.bugununTarihi-self.dogumTarihi
+        return yas
+    def tanit(self):
+        print("\nMerhaba ben {} {} {} yaşındayım.\n"
+              " Boyum {}, kilom ise {}. "
+              "\nSizinle tanıştığıma memnun oldum."
+              "".format(self.isim,self.soyisim,self.yasHesapla(),self.boy,self.kilo))
+nes=insan()
+nes.dogumTarihi=1996
+nes.bugununTarihi=2020
+nes.kilo=55
+nes.boy=175
+nes.isim="Neslin"
+nes.soyisim="Neslin"
+
+nes.tanit()
+
+#OOP you are my dıl =)
+
+
+
+class ogrenci:
+    universite=""
+    bolum=""
+    numara=0
+    isimSoyisim=""
+    cinsiyet=None
+    notOrtalamasi=0
+    birinciSinifNot=0
+    ikinciciSinifNot = 0
+    ucuncuSinifNot = 0
+    dorduncuSinifNot = 0
+
+    def ortalamHesapla(self):
+        self.birinciSinifNot=float(input("1.Sınıf Not Ortalamsı : "))
+        self.ikinciciSinifNot = float(input("2.Sınıf Not Ortalamsı : "))
+        self.ucuncuSinifNot = float(input("3.Sınıf Not Ortalamsı : "))
+        self.dorduncuSinifNot = float(input("4.Sınıf Not Ortalamsı :"))
+
+        self.notOrtalamasi=(self.birinciSinifNot+self.ikinciciSinifNot+self.ucuncuSinifNot+self.dorduncuSinifNot)/4
+        return self.notOrtalamasi
+
+    def tanit(self):
+        return "\n\n------------ÖĞRENCİ BİLGİLERİ------------\n"\
+                "isim Soyisim :{}\n" \
+               "Cinsiyet : {}\n" \
+               "Üniversite : {}\n" \
+               "Bölüm :{} \n" \
+               "Öğrenci Numarası :{}\n" \
+               "Not ortalaması : {}\n" \
+               "------------------------------------------\n" \
+               "".format(self.isimSoyisim,self.cinsiyet,self.universite,self.bolum,self.numara,self.notOrtalamasi)
+
+    def veriGiris(self):
+            print("\nÖğrenci Veri giriş ekranı \n")
+            self.isimSoyisim=input("İsim Soyisim : ")
+            self.cinsiyet=input("Cinsiyet : ")
+            self.universite=input("Üniversite : ")
+            self.bolum=input("Bölüm :")
+            self.numara=input("Öğrenci Numarası : ")
+            self.notOrtalamasi=self.ortalamHesapla()
+            return self.dosyayaAktar()
+    def dosyayaAktar(self):
+        dosya = open("c:/ders/ogrenciBilgi.txt", "a")
+        dosya.write(self.tanit())
+        dosya.close()
+
+
+nes=ogrenci()
+nes.veriGiris()
+ahmet=ogrenci()
+ahmet.veriGiris()
