@@ -1479,3 +1479,60 @@ nes=ogrenci()
 nes.veriGiris()
 ahmet=ogrenci()
 ahmet.veriGiris()
+
+
+
+
+#İnit (yapılandırıcı)
+
+
+class insan():
+    def __init__(self,ad,soyad,yas,cins):#init Javadaki yapılandırıcı 
+        self.ad=ad
+        self.soyad=soyad
+        self.yas=yas
+        self.cins=cins
+        
+i=insan("nes","celik",24,"kadin")
+print(i.ad)
+
+
+
+#python private çalışma
+
+
+class bankaHesap(object):
+    def __init__(self,ad,soyad,para):
+        self.ad=ad
+        self.soyad=soyad
+        self.__para=para #private hale getirdim erişim enegelli iç methodla erişim yapılabilir
+        
+    def adDegis(self,ad): #SetAd da denilebilir 
+        self.ad=ad
+        return self.ad
+    def adSoyle(self): #setAd da denilebilir cem hoca taktiği doğru mu yanlış mı bilmiyorum zaman gösterecek
+        return self.ad
+    def soyadDegis(self,soyad):
+        self.soyad=soyad
+        return self.soyad
+    
+    def soyadSoyle(self):
+        return self.soyad
+    
+    def paraMiktarDegis(self,miktar):
+        self.__para=miktar
+        
+    def paraMiktarKac(self): #getParaMiktar
+        return self.__para
+    
+    def tanit(self):
+        print("\nMerhaba \nSayın {} {} hesap bakiyeniz : {} TL'dir\nİyi günler dileriz. "
+              .format(self.adSoyle(),self.soyadSoyle(),self.paraMiktarKac()))
+i=bankaHesap("nes","celik",2000)
+i.tanit()
+i.paraMiktarDegis(5000)
+i.tanit()
+
+
+
+
