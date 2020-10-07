@@ -1535,4 +1535,45 @@ i.tanit()
 
 
 
+#kalıtım
+
+class hayvan:#Ebeveyn
+    def __init__(self):
+        print("Bir hayvan üretildi !")
+        
+       
+    def beslen(self):
+        print("Hayvan beslendi !")
+        
+    def ure(self):
+        print("Hayvan üredi !")
+        
+class kus(hayvan):#Yavru -Türetilen nesne -Miras alan 
+    def __init__(self):
+        super().__init__()
+        print("kuş üretildi hayvandan")
+        
+    def uc(self):
+        print("Kuç uçtu !")
+        
+class balik(hayvan):
+    def __init__(self):
+        super().__init__()
+    def yuz(self):
+        print("Balık yüzdü !")
+        
+class yilan(hayvan):
+    def __init__(self):
+        super().__init__()
+    def surun(self):
+        print("Yılan süründü !")
+        
+canli=hayvan()
+kus=kus()
+balik=hayvan()
+balik.beslen()
+kus.uc()
+balik.ure()
+
+
 
