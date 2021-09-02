@@ -18,18 +18,17 @@
 
 
 # Usage
- Projeyi klonladıktan sonra Visual Studio Code programında açınız 
+ Projeyi klonladıktan sonra Visual Studio Code veya Python idelerinden birinde  açınız 
 
 Linux için :
 
 
-``` cd Python 
-code . ```
+``` cd Python code . ```
 
 
 # Contribulting
 
-Bu çalışma pull edilebilir ve gerekli eklemelere açıktır.
+Bu çalışma pull edilebilir, eklemelere açıktır.
 
 
 
