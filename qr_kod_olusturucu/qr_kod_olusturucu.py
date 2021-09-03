@@ -6,7 +6,7 @@ qr=qrcode.QRCode(version=1,
     border=5)
 
 
-giden_veri="Merhaba Ben NES bu qr kodu gorup kaynak koduna ulasmak isterseniz eger su linke tiklayabilirsiniz .."
+giden_veri="Merhaba Ben NES bu qr kodu gorup kaynak koduna ulasmak isterseniz eger su linke tiklayabilirsiniz -> https://github.com/Neslihan-Celik/Python/tree/master/qr_kod_olusturucu"
 qr.add_data(giden_veri)
 qr.make(fit=True)
 
