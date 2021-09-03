@@ -1,0 +1,4 @@
+Bu dosya python ile olusturulmus bir ses dosyasidir verilen metin dosyalari bu program sayesinde ses dosyasina donusturulur.
+
+deneme yazisi
+Turkiyenin baskenti istanbul degil ankaradir en kalabalik sehir istanbuldur
